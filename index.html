@@ -8,71 +8,139 @@
     <!-- Google Font Integration -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!-- css lekulla vazhi -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- thala -->
     <header>
-        <div class="logo">Henna Store</div>
+        <div class="logo">
+            <i class="fas fa-leaf"></i> Henna Store
+        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Welcome to the Henna World</h1>
-        <p>Natural, organic, and beautiful henna products</p>
-        <a href="#products" class="btn">Shop Now</a>
-    </section>
+    <!-- Home Section -->
+    <div id="home" class="section">
+        <section class="hero">
+            <h1>Welcome to the Henna World</h1>
+            <p>Natural, organic, and beautiful henna products</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </section>
+    </div>
 
-    <!-- Sadanangalde list -->
-    <section id="products" class="products">
-        <h2>Our Products</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1607746861127-139ccf1d602e?fit=crop&w=500&h=500&q=80" alt="Henna Product 1">
-                <h3>Henna Cone</h3>
-                <p>$5.00</p>
-                <button class="buy-btn">Buy Now</button>
+    <!-- Products Section -->
+    <div id="products" class="section">
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1607746861127-139ccf1d602e?fit=crop&w=500&h=500&q=80" alt="Henna Product 1">
+                    <h3>Henna Cone</h3>
+                    <p>$5.00</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?fit=crop&w=500&h=500&q=80" alt="Henna Product 2">
+                    <h3>Henna Powder</h3>
+                    <p>$10.00</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <img src="https://images.unsplash.com/photo-1585663526475-f9d4d4e6cd83?fit=crop&w=500&h=500&q=80" alt="Henna Product 3">
+                    <h3>Henna Kit</h3>
+                    <p>$20.00</p>
+                    <button class="buy-btn">Add to Cart</button>
+                </div>
             </div>
-            <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?fit=crop&w=500&h=500&q=80" alt="Henna Product 2">
-                <h3>Henna Powder</h3>
-                <p>$10.00</p>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-            <div class="product-item">
-                <img src="https://images.unsplash.com/photo-1585663526475-f9d4d4e6cd83?fit=crop&w=500&h=500&q=80" alt="Henna Product 3">
-                <h3>Henna Kit</h3>
-                <p>$20.00</p>
-                <button class="buy-btn">Buy Now</button>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We specialize in providing high-quality henna products that are natural and organic. Our henna is sourced from the finest farms to ensure the best quality for our customers.</p>
-    </section>
+    <div id="about" class="section">
+        <section class="about">
+            <h2>About Us</h2>
+            <p>We specialize in providing high-quality henna products that are natural and organic. Our henna is sourced from the finest farms to ensure the best quality for our customers.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-leaf"></i>
+                    <h3>100% Organic</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Quality</h3>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Fast Shipping</h3>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Reviews Section -->
+    <div id="reviews" class="section">
+        <section class="reviews">
+            <h2>Client Reviews</h2>
+            <div class="review-list">
+                <!-- Existing reviews will be loaded here -->
+            </div>
+            <form id="review-form">
+                <h3>Leave a Review</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <textarea id="review-text" placeholder="Your Review" required></textarea>
+                <select id="rating" required>
+                    <option value="">Select Rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <button type="submit">Submit Review</button>
+            </form>
+        </section>
+    </div>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: info@hennastore.com</p>
-        <p>Phone: +1234567890</p>
-    </section>
+    <div id="contact" class="section">
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> Email: info@hennastore.com</p>
+                <p><i class="fas fa-phone"></i> Phone: +1234567890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Henna St, Beauty City, 12345</p>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Henna Store. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2024 Henna Store. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- js lekula vazhi -->
