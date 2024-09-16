@@ -139,6 +139,7 @@ nav ul li a:hover {
 .about h2, .contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    margin-left: 5px;
 }
 
 .about p, .contact p {
@@ -160,5 +161,140 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+ /* Reviews Section Styles */
+  
+
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .review-list {
+    margin: 20px;
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-list li {
+    margin-bottom: 1em;
+  }
+  
+  .review-list li:last-child {
+    margin-bottom: 0;
+  }
+  
+  #review-form {
+    margin: 20px;
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #review-form input, #review-form textarea, #review-form select {
+    width: 75%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  #review-form button[type="submit"] {
+    background-color: #ff2c2c;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  #review-form button[type="submit"]:hover {
+    background-color: #7c2323;
+  }
+  
+  /* Contact Section Styles */
+  
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #contact-form {
+    margin: 20px;
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contact-form input, #contact-form textarea {
+    width: 75%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+  }
+  
+  #contact-form button[type="submit"] {
+    background-color: #ff2c2c;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  #contact-form button[type="submit"]:hover {
+    background-color: #7c2323;
+  }
+  
+  .contact-info {
+    margin: 20px;
+    width: calc(50% - 20px);
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-align: center;
+  }
+  
+  .contact-info p {
+    margin-bottom: 1em;
+  }
+  
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #25D366; /* WhatsApp green color */
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .whatsapp-icon a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .whatsapp-icon i {
+    font-size: 40px;
+  }
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
     }
 }
