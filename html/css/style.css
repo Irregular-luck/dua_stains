@@ -41,7 +41,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 8px;
 }
 
 nav ul li a {
@@ -137,6 +137,7 @@ nav ul li a:hover {
 }
 
 .product-item:hover {
+    border: 2px solid #050505;
     transform: scale(1.05);
 }
 
@@ -196,12 +197,12 @@ footer {
 .features {
   display: flex;              /* Use flexbox to arrange child elements horizontally */
   justify-content: center;   /* Center the feature items horizontally */
-  gap: 20px;                 /* Space between the feature items */
+  gap: 15px;                 /* Space between the feature items */
 }
 
 .feature {
   background-color: #b4b29c; /* Background color for each feature item */
-  padding: 20px;            /* Padding inside each feature item */
+  padding: 15px;            /* Padding inside each feature item */
   border-radius: 5px;       /* Rounded corners for each feature item */
   text-align: center;       /* Center the text inside each feature item */
   width: 200px;             /* Optional: Set a fixed width for each feature item */
@@ -354,3 +355,6 @@ footer {
         opacity: 0;
     }
 }
+
+
+
