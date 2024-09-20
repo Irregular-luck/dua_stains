@@ -228,7 +228,13 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+  .reviews h2 {
+    color: #050505;
+  }
+  .reviews h3 {
+    color: #ffffff;
+  }
+
   .review-list {
     margin: 20px;
     width: calc(50% - 20px);
@@ -313,6 +319,7 @@ footer {
   }
   
   .contact-info {
+    -moz-box-align: center;
     margin: 20px;
     width: calc(50% - 20px);
     padding: 20px;
