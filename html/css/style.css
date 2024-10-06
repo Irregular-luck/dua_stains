@@ -363,5 +363,20 @@ footer {
     }
 }
 
+/* Cart css*/
+.cart-icon {
+  position: relative;
+  text-decoration: none;
+  
+}
+
+.cart-icon i {
+  margin-right: 5px;
+}
+
+.cart-icon #cart-count {
+  color: red;
+  font-weight: bold;
+}
 
 

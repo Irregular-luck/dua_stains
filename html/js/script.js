@@ -82,3 +82,34 @@ document.getElementById('review-form').addEventListener('submit', function(event
     });
   });
   const whatsappIcon = document.querySelector('.whatsapp-icon');
+
+
+  //cart option
+  let cart = [];
+
+function addToCart(productName, price) {
+    // Create product object
+    const product = { name: productName, price: price };
+    
+    // Add product to cart array
+    cart.push(product);
+    
+    // Update cart count on the UI
+    document.getElementById('cart-count').innerText = cart.length;
+
+    // Save cart to local storage to persist across page reloads
+    localStorage.setItem('cart', JSON.stringify(cart));
+    
+    alert(productName + " has been added to your cart.");
+}
+
+// Function to retrieve cart from localStorage
+function loadCart() {
+    const savedCart = JSON.parse(localStorage.getItem('cart'));
+    if (savedCart) {
+        cart = savedCart;
+        document.getElementById('cart-count').innerText = cart.length;
+    }
+}
+
+window.onload = loadCart; // Load cart when the page loads
