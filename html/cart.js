@@ -28,24 +28,39 @@ function removeFromCart(index) {
 
 function checkout() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let orderSummary = 'Order Summary:\n\n';
-    let total = 0;
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
 
-    cart.forEach((product) => {
-        orderSummary += `Product: ${product.name}, Price: $${product.price}\n`;
-        total += product.price;
+    // Create an order summary
+    let orderSummary = "Order Summary:\n";
+    let totalPrice = 0;
+    let productCount = {};
+
+    cart.forEach(product => {
+        totalPrice += product.price;
+        if (productCount[product.name]) {
+            productCount[product.name].count++;
+        } else {
+            productCount[product.name] = { price: product.price, count: 1 };
+        }
     });
 
-    orderSummary += `\nTotal: $${total}\n`;
+    for (const [name, info] of Object.entries(productCount)) {
+        orderSummary += `${name} x ${info.count} - Price: $${info.price * info.count}\n`;
+    }
 
-    // Replace 'YOUR_WHATSAPP_NUMBER' with your actual WhatsApp number
-    const whatsappNumber = '+918848291939'; // Example: '1234567890'
-    const encodedMessage = encodeURIComponent(orderSummary);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    orderSummary += `Total Price: $${totalPrice}\n`;
 
-    // Redirect to WhatsApp
+    // Redirect to WhatsApp with order summary
+    const whatsappNumber = "+918848291939";
+    const message = encodeURIComponent(orderSummary);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
     window.open(whatsappURL, '_blank');
 }
+
 
 
 window.onload = loadCartItems;
