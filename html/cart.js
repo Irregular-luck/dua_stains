@@ -15,7 +15,7 @@ function loadCartItems() {
     });
     
     document.getElementById('cart-items').innerHTML = cartHTML;
-    document.getElementById('cart-total').innerText = total;
+    document.getElementById('cart-total').innerText = `₹${total}`;
 }
 
 function removeFromCart(index) {
