@@ -1,127 +1,113 @@
-/* General Styling */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
+    background-color: #b4b29c; /* Dark background */
+    color: #e0e0e0; /* Light text for better contrast */
+    transition: all 0.3s ease;
 }
 
-a {
-    text-decoration: none;
-    color: #333;
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* Navbar Styling */
+/* Navbar Styles */
 .navbar {
-    background-color: #333;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color:#00a67f7b; /* Darker navbar background */
+    padding: 14px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
-.nav-link {
-    color: #fff;
-    margin-right: 15px;
-    font-size: 1.2em;
+.navbar .nav-link {
+    color: #e0e0e0; /* Light text for navbar */
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-link:hover {
-    color: #f4c542;
+.navbar .nav-link:hover {
+    background-color: #333333; /* Darker hover effect */
+    color: #19e6dc 
 }
 
-/* Cart Container Styling */
+/* Cart Container */
 .cart-container {
-    width: 80%;
+    max-width: 800px;
     margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    background-color: #647C6C; /* Dark card background */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow */
 }
 
-/* Cart Items Styling */
+.cart-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #fff; /* Accent color for title */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
 .cart-items {
     margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Light text for items */
 }
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ccc;
-}
-
-.cart-item p {
-    margin: 0;
-    font-size: 1.2em;
-}
-
-.cart-item button {
-    background-color: #ff6666;
-    border: none;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.cart-item button:hover {
-    background-color: #ff4d4d;
-}
-
-/* Cart Summary Section */
 .cart-summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.4em;
+    text-align: right;
+    font-size: 20px;
+    margin-top: 10px;
+    color: whitesmoke; /* Bright accent for summary */
 }
 
-.cart-total {
-    font-weight: bold;
+.cart-summary p {
+    margin: 0;
+    font-weight: 500;
 }
 
 /* Checkout Button */
 .checkout-btn {
-    background-color: #28a745;
+    background-color: #00a680; /* Bright accent button */
+    color: #fff;
+    padding: 15px 25px;
     border: none;
-    color: white;
-    padding: 12px 24px;
-    font-size: 1.2em;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .checkout-btn:hover {
-    background-color: #218838;
+    background-color: #19e6dc;
+    transform: scale(1.05);
+}
+
+.checkout-btn:active {
+    background-color: #19e6dc;
+    transform: scale(1);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .cart-container {
-        width: 95%;
-        padding: 15px;
-    }
-
-    .cart-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cart-summary {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 20px;
     }
 
     .checkout-btn {
         width: 100%;
-        margin-top: 10px;
+        padding: 18px;
+    }
+
+    .cart-summary {
+        text-align: center;
     }
 }
+
+/* Fonts and External Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
