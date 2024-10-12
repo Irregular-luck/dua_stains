@@ -7,7 +7,7 @@ function loadCartItems() {
         cartHTML += `
         <div class="cart-item">
             <p>${product.name}</p>
-            <p>Price: $${product.price}</p>
+            <p>Price: ₹${product.price}</p>
             <button onclick="removeFromCart(${index})">Remove</button>
         </div>
         `;
@@ -48,7 +48,7 @@ function checkout() {
     });
 
     for (const [name, info] of Object.entries(productCount)) {
-        orderSummary += `${name} x ${info.count} - Price: $${info.price * info.count}\n`;
+        orderSummary += `${name} x ${info.count} - Price: ₹${info.price * info.count}\n`;
     }
 
     orderSummary += `Total Price: $${totalPrice}\n`;
