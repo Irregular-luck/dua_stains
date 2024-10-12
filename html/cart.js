@@ -51,7 +51,7 @@ function checkout() {
         orderSummary += `${name} x ${info.count} - Price: ₹${info.price * info.count}\n`;
     }
 
-    orderSummary += `Total Price: $${totalPrice}\n`;
+    orderSummary += `Total Price: ₹${totalPrice}\n`;
 
     // Redirect to WhatsApp with order summary
     const whatsappNumber = "+918848291939";
