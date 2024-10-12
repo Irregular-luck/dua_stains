@@ -37,7 +37,6 @@ function checkout() {
     });
 
     orderSummary += `\nTotal: $${total}\n`;
-    orderSummary += 'Thank you for your purchase!';
 
     // Replace 'YOUR_WHATSAPP_NUMBER' with your actual WhatsApp number
     const whatsappNumber = '+918848291939'; // Example: '1234567890'
